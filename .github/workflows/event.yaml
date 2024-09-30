@@ -1,7 +1,6 @@
-name: Push Events
+name: Manual Workflow
 on: 
-  schedule:
-  - cron: '*/5 * * * *' #every 5 mins
+  workflow_dispatch:
 jobs:
   show-info:
     runs-on: ubuntu-latest
