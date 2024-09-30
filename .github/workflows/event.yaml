@@ -1,6 +1,8 @@
-name: Manual Workflow
+name: Push Events
 on: 
-  workflow_dispatch:
+  issues:
+    types:
+      - opened
 jobs:
   show-info:
     runs-on: ubuntu-latest
