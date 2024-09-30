@@ -7,8 +7,6 @@ jobs:
   show-info:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
     - name: Info
       run: |
         echo "This is a push event on all the branches"
