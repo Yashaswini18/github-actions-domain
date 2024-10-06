@@ -1,15 +1,22 @@
 name: Push Events
 on: 
-  issues:
-    types:
-      - opened
+  workflow_dispatch:
+    inputs:
+      param1:
+        description: "Description for params1"
+        required: true
+        default: "Hello World"
+
 jobs:
-  show-info:
+  run-manual-task:
     runs-on: ubuntu-latest
     steps:
-    - name: Info
-      run: |
-        echo "This is a push event on all the branches"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Run Manual task
+        run: |
+          echo "Running manual task with param1: ${{github.event.input.param1}}"
+      
         
     
  
