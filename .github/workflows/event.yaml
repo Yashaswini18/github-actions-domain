@@ -8,4 +8,4 @@ jobs:
       MY_VARIABLE: "Hello from Env Variable"
     steps:
       - name: Display Env Var
-        run: echo "MY_VARIABLE:$MY_VARIABLE"
+        run: echo "MY_VARIABLE is $MY_VARIABLE"
