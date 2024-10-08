@@ -1,22 +1,14 @@
-name: Push Events
-on: 
-  workflow_dispatch:
-    inputs:
-      param1:
-        description: "Description for params1"
-        required: true
-        default: "Hello World"
+name: Environment Variables
+on: [push]
 
 jobs:
-  run-manual-task:
+  example:
     runs-on: ubuntu-latest
+    env:
+      APP_MODE: ${{vars.APP_MODE}}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Run Manual task
-        run: |
-          echo "Running manual task with param1: ${{github.event.inputs.param1}}"
-      
+      - name: Display Env Var
+        run: echo "This is $APP_MODE mode"
         
     
  
