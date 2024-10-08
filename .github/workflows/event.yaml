@@ -9,6 +9,3 @@ jobs:
     steps:
       - name: Display Env Var
         run: echo "This is $APP_MODE mode"
-        
-    
- 
